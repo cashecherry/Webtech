@@ -1,0 +1,35 @@
+
+
+<form name="personForm">
+
+    name:<input type="text" name="name" ng-model="txtpin" ng-pattern="/[A-Za-z]/" />
+    
+    <span style="color:Red" ng-show="personForm.name.$error.pattern">Only alphabet</span>
+    
+    
+
+<form name="personForm">
+
+    Username:<input type="text" name="uname" ng-model="txtpin" ng-pattern="/^[A-Z0-9]{1,5}$/" />
+    
+    <span style="color:Red" ng-show="personForm.uname.$error.pattern">alpha numeric Allowed, Maximum 5 Characters</span>
+    
+    
+
+    password:<input type="password" name="password" ng-model="txtpin" ng-pattern="/^[A-Z0-9]{1,5}$/" />
+    
+    <span style="color:Red" ng-show="personForm.password.$error.pattern">alpha numeric Allowed, Maximum 5 Characters</span>
+
+    Contact:<input type="text" name="contact" ng-model="txtpin" ng-pattern="/^[0-9]{10}$/" />
+    
+    <span style="color:Red" ng-show="personForm.contact.$error.pattern">10 digit</span>
+
+    
+    
+    email:<input type="text" name="email" ng-model="txtpin" ng-pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" />
+    
+    <span style="color:Red" ng-show="personForm.email.$error.pattern">invalid</span>
+
+    
+    </form>
+    
